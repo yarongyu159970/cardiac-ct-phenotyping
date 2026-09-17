@@ -93,7 +93,6 @@ tables to `results/demo/tables/`. The cohorts can be regenerated with
 | `calibration` | `calibration.py` | Grouped 36-month calibration (Kaplan-Meier / Aalen-Johansen) |
 | `tables` | `tables.py` | Baseline, phenotype-characteristic and incremental-performance tables |
 
-`icc.py` (inter-method agreement of segment perfusion values) is run separately:
 
 
 ## License
