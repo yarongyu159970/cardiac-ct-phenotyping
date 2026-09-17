@@ -95,9 +95,6 @@ tables to `results/demo/tables/`. The cohorts can be regenerated with
 
 `icc.py` (inter-method agreement of segment perfusion values) is run separately:
 
-```bash
-python scripts/icc.py --source-a data/icc/source_a.xlsx --source-b data/icc/source_b.xlsx --output-dir results/icc
-```
 
 ## License
 
