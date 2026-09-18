@@ -6,7 +6,7 @@ Segment-level perfusion values (17 segments × MBF, MBV, TTP, PCBV, FE) are redu
 PCA retaining components up to 90% explained variance. Remaining numeric variables are screened for
 pairwise |r| > 0.90 (PCA scores preferred over raw fields) and categorical variables that are nearly
 determined by a numeric variable (eta squared > 0.80) are removed. K-prototypes clustering is run for
-K = 2–6 with 20 seeds; the K = 3 solution from the prespecified reference seed defines the phenotypes.
+K = 2–5 with 20 seeds; the K = 3 solution from the prespecified reference seed defines the phenotypes.
 Stability is assessed by seed agreement (ARI) and by refitting on 100 subsamples of 80% of patients
 (ARI and cluster-wise Jaccard against the reference labels). Outcomes are not used at any step.
 
@@ -57,5 +57,4 @@ bootstrap samples.
 
 Phenotype-by-medication interactions are tested by likelihood-ratio comparison of ridge Cox models
 with and without the interaction term, with Benjamini–Hochberg adjustment within cohort and endpoint.
-Cumulative incidence by phenotype and Gray's tests use `cmprsk`. Inter-method agreement of segment
-PCBV and TTP is quantified by ICC(A,1) over pooled segments with a patient-cluster bootstrap.
+Cumulative incidence by phenotype and Gray's tests use `cmprsk`. 
