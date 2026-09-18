@@ -8,15 +8,14 @@ Both cohorts are supplied as one CSV (or XLSX) table with one row per patient.
 |---|---|
 | `ID` | Unique patient identifier; used only to align tables |
 | `TIME` | Follow-up in months |
-| `MACST` | 0 = no event, 1 = hard MACE, 2 = soft MACE. Composite MACE is `MACST != 0`; hard MACE is `MACST == 1` |
+| `MACST` | 0 = no event, 1 = hard MACE, 2 = soft MACE. Composite MACE is `MACET != 0`; hard MACE is `MACET == 1` |
 | `Cluster` | Derivation cohort only: K = 3 phenotype label (1, 2, 3). Any `Cluster` column in the validation table is ignored and replaced by the frozen classifier |
 
 ## Clinical variables
 
 `age`, `gender` (0 = female, 1 = male), `BMI`, `SBP`, `HTN`, `DM`, `dislipidemia`, `smoking` (0/1),
 `CCS` (1–3), `CACS` (1 = 0, 2 = 1–100, 3 = 101–400, 4 = > 400), `CAD-RADS` (0–5), laboratory values
-`TC`, `HDL`, `LDL`, `TG`, `FG` (mmol/L) and `HbA1c` (%), medications `Anti1`, `Anti2`, `Antidiabetic`,
-`Antiischemic`, `Nitrates`, `Statin` (0/1), plaque markers `HRP`, `LAP`, `PR`, `NRS`, `SC` (0/1).
+`TC`, `HDL`, `LDL`, `TG`, `FG` (mmol/L) and `HbA1c` (%), medications `Antiplatelet therapy`, `Antihypertensive medication`, `Antidiabetic medication`,`Antiischemic medication`, `Nitrates`, `Statin` (0/1), plaque markers `HRP`, `LAP`, `PR`, `NRS`, `SC` (0/1).
 
 ## Imaging variables
 
@@ -32,7 +31,7 @@ Both cohorts are supplied as one CSV (or XLSX) table with one row per patient.
 
 ## Requirements of the prognostic models
 
-Models A–C use `age`, `gender`, `SBP`, `Anti2`, `TC`, `HDL`, `smoking`, `DM`, `CAD-RADS` and `Cluster`.
+Models A–C use `age`, `gender`, `SBP`, `Antihypertensive medication`, `TC`, `HDL`, `smoking`, `DM`, `CAD-RADS` and `Cluster`.
 The categorical variables must use the integer codes above and every level must be present in each
 cohort, giving 8, 13 and 15 coefficients for Models A, B and C. Missing values are not imputed;
 incomplete rows cause an explicit error.
