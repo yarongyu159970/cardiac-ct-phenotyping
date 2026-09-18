@@ -25,7 +25,7 @@ def synthetic_candidates() -> pd.DataFrame:
         "ID": np.arange(n),
         "Cluster": cacs % 3 + 1,
         "TIME": np.arange(n) + 1,
-        "MACST": cacs % 3,
+        "MACET": cacs % 3,
         "CACS": cacs,
         "age": np.arange(n) + 30.0,
         "constant": np.ones(n),
